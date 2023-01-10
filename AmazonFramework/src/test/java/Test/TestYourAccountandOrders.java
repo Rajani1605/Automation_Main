@@ -1,6 +1,4 @@
- package Test;
-
-import java.util.concurrent.TimeUnit;
+package Test;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -44,9 +42,7 @@ public class TestYourAccountandOrders extends Base {
 		{
 			driver= openEdgeBrowser();
 		}
-
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Base.maximizeBrowser(driver);
 		}
 
 		@BeforeClass
@@ -59,7 +55,7 @@ public class TestYourAccountandOrders extends Base {
 	
 		@BeforeMethod 
 		public void openAmazonURL()  {
-		driver.get("https://www.amazon.in/");
+		driver.get(baseURL);
 		amzpage.mouseover(driver);
 		}
 	

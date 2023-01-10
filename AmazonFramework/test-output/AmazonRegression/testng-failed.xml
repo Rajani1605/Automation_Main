@@ -4,16 +4,28 @@
   <test thread-count="3" parallel="classes" name="ChromeTest(failed)">
     <parameter name="Browser" value="Chrome"/>
     <classes>
+      <class name="Test.TestYourAccountandOrders">
+        <methods>
+          <include name="verifyYourAccount"/>
+          <include name="createPOMObjects"/>
+          <include name="verifyYourOrders"/>
+          <include name="clearObject"/>
+          <include name="openAmazonURL"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="screenShot"/>
+        </methods>
+      </class> <!-- Test.TestYourAccountandOrders -->
       <class name="Test.TestCart">
         <methods>
           <include name="clearObject"/>
           <include name="RemoveFromCart"/>
-          <include name="launchBrowser"/>
           <include name="screenShot"/>
-          <include name="afterTest"/>
           <include name="createPOMObjects"/>
-          <include name="openAmazonURL"/>
+          <include name="tearDown"/>
           <include name="AddtoCart"/>
+          <include name="openAmazonURL"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- Test.TestCart -->
     </classes>
@@ -21,16 +33,28 @@
   <test thread-count="3" parallel="classes" name="EdgeTest(failed)">
     <parameter name="Browser" value="Edge"/>
     <classes>
+      <class name="Test.TestYourAccountandOrders">
+        <methods>
+          <include name="verifyYourAccount"/>
+          <include name="verifyYourOrders"/>
+          <include name="createPOMObjects"/>
+          <include name="clearObject"/>
+          <include name="openAmazonURL"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="screenShot"/>
+        </methods>
+      </class> <!-- Test.TestYourAccountandOrders -->
       <class name="Test.TestCart">
         <methods>
           <include name="clearObject"/>
           <include name="RemoveFromCart"/>
           <include name="screenShot"/>
-          <include name="launchBrowser"/>
-          <include name="afterTest"/>
           <include name="createPOMObjects"/>
-          <include name="AddtoCart"/>
+          <include name="tearDown"/>
           <include name="openAmazonURL"/>
+          <include name="AddtoCart"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- Test.TestCart -->
     </classes>

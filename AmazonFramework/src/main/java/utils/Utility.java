@@ -32,7 +32,7 @@ public class Utility {
 	}
 	
 	public static String getDatafromExcel(int i, int j) {	
-		String path = "C:\\Users\\rajan\\Desktop\\Test.xlsx";
+		String path = System.getProperty("user.dir")+"//TestData//Test.xlsx";
 		Sheet Datasheet;
 		FileInputStream file;
 		String value ="";

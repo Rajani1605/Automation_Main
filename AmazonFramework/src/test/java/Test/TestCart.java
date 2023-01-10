@@ -1,7 +1,5 @@
 package Test;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -42,8 +40,7 @@ public class TestCart extends Base {
 				driver = openFirefoxBrowser();
 			
 			}
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Base.maximizeBrowser(driver);
 		}
 		
 	
@@ -54,13 +51,13 @@ public class TestCart extends Base {
 	
 		@BeforeMethod 
 		public void openAmazonURL() {
-			driver.get("https://www.amazon.in/");
+			driver.get(baseURL);
 		}
 	
 		@Test (priority = 1)
 		public void AddtoCart() throws InterruptedException {
 			amzpage.getCartCount();
-			amzpage.productSearch(Utility.getDatafromExcel(2, 0));
+			amzpage.productSearch(Utility.getDatafromExcel(1, 0));
 			amzpage.clickonProduct();
 			amzpage.switchtonewtab(driver, 1);
 			Thread.sleep(3000);

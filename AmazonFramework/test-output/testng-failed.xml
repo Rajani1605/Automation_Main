@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="classes" name="Failed suite [AmazonRegression]" guice-stage="DEVELOPMENT">
-  <test thread-count="3" parallel="classes" name="ChromeTest(failed)">
-    <parameter name="Browser" value="Chrome"/>
-    <classes>
-      <class name="Test.TestCart">
-        <methods>
-          <include name="clearObject"/>
-          <include name="RemoveFromCart"/>
-          <include name="launchBrowser"/>
-          <include name="screenShot"/>
-          <include name="afterTest"/>
-          <include name="createPOMObjects"/>
-          <include name="openAmazonURL"/>
-          <include name="AddtoCart"/>
-        </methods>
-      </class> <!-- Test.TestCart -->
-    </classes>
-  </test> <!-- ChromeTest(failed) -->
-  <test thread-count="3" parallel="classes" name="EdgeTest(failed)">
-    <parameter name="Browser" value="Edge"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="Test.TestCart">
         <methods>
@@ -29,10 +11,10 @@
           <include name="launchBrowser"/>
           <include name="afterTest"/>
           <include name="createPOMObjects"/>
-          <include name="AddtoCart"/>
           <include name="openAmazonURL"/>
+          <include name="AddtoCart"/>
         </methods>
       </class> <!-- Test.TestCart -->
     </classes>
-  </test> <!-- EdgeTest(failed) -->
-</suite> <!-- Failed suite [AmazonRegression] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

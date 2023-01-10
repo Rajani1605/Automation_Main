@@ -3,17 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test.TestYourAccountandOrders">
+      <class name="Test.TestCart">
         <methods>
-          <include name="verifyYourAccount"/>
-          <include name="launchBrowser"/>
-          <include name="verifyYourOrders"/>
-          <include name="createPOMObjects"/>
           <include name="clearObject"/>
+          <include name="RemoveFromCart"/>
+          <include name="screenShot"/>
+          <include name="launchBrowser"/>
+          <include name="afterTest"/>
+          <include name="createPOMObjects"/>
           <include name="openAmazonURL"/>
-          <include name="afterClass"/>
+          <include name="AddtoCart"/>
         </methods>
-      </class> <!-- Test.TestYourAccountandOrders -->
+      </class> <!-- Test.TestCart -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
