@@ -15,12 +15,12 @@ import org.openqa.selenium.io.FileHandler;
 
 public class Utility {
 	
-	public static File captureScreenShot(String TestCaseName, WebDriver driver) {
+	public static void captureScreenShot(String TestCaseName, WebDriver driver) {
 		TakesScreenshot t = (TakesScreenshot)driver ;
 		
 			File source = t.getScreenshotAs(OutputType.FILE);
 		
-			File destination = new File("C:\\Users\\rajan\\Desktop\\Screenshots\\"+TestCaseName+" "+".jpeg");
+			File destination = new File(System.getProperty("user.dir")+"//Screenshots//"+TestCaseName+" "+".jpeg");
 		
 			try {
 				FileHandler.copy(source, destination);
@@ -28,7 +28,6 @@ public class Utility {
 			catch (IOException e) {
 				e.printStackTrace();
 			}
-		return destination;
 	}
 	
 	public static String getDatafromExcel(int i, int j) {	

@@ -16,7 +16,7 @@ public class AmazonhomePage {
 	@FindBy (xpath = "//input[@id='twotabsearchtextbox']")
 	private WebElement SearchField ;
 	
-	@FindBy (xpath = "(//div[@data-component-type='s-search-result']//a)[4]")
+	@FindBy (xpath = "(//div[@data-component-type='s-search-result']//a)[5]")
 	private WebElement FirstResult ;
 	
 	@FindBy (xpath = "//a[@id='nav-cart']")
